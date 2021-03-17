@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="card shadow-sm">
+    			    			<img src="/{{ obj.path }}.png">
+    			    		</div>
+				<div class="col-sm-4">
+					<p>{{ obj.name }}</p>
+					<p>{{ obj.path }}</p>
+					<p><a href="/{{obj.path}}.obj" download="">Ссылка на скачивание</a></p>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
