@@ -1,0 +1,15 @@
+**/__pycache__/
+.idea/
+.flaskenv
+*.tar.*
+*.7z
+
+**/node_modules/
+*.orig
+*.pyc
+*.map
+*v8-compile-cache*
+
+tmp
+venv/
+venv3/
