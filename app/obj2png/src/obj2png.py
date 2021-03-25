@@ -111,18 +111,20 @@ if __name__ == '__main__':
     for objfile in objfiles:
         
         if os.path.isfile(objfile) and '.obj' in objfile:
-           newname=str(os.path.dirname(objfile))
+           newname=str(os.path.basename(objfile))
            direct=str(os.path.dirname(objfile))
-           l=len(newname)-1
-           p=newname
-           for i in range(0,l):
-              if p[i]=='/':
-                  newname=newname[i+1:]
-           newname1=direct+'/'
-           newname2=newname1+newname
-           newname3=newname2+'.obj'
-           os.rename(objfile,newname3)
-           objfile=newname3
+           # l=len(newname)-1
+           # p=newname
+           # for i in range(0,l):
+           #    if p[i]=='/':
+           #       newname=newname[i+1:]
+           # newname1=direct+'/'
+           # newname2=newname1+newname
+           # newname3=newname2+'.obj'
+           #
+           # os.rename(objfile,newname3)
+           objfile=direct+'/'+newname
+           print(objfile)
            outfile = objfile.replace('.obj','.png')
            if args.outfile:
                outfile=args.outfile

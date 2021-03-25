@@ -5,6 +5,10 @@ from app.models import SModel
 from flask import render_template, request, url_for
 import os
 
+# TODO:
+# abc.ru/api/000009111/
+# REST API
+
 @app.route('/')
 @app.route('/index')
 def index(page=1):

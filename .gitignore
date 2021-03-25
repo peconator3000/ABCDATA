@@ -1,0 +1,16 @@
+data/
+.idea/
+.flaskenv
+tmp
+venv/
+venv3/
+**/node_modules/
+**/.DS_Store
+*.orig
+*.pyc
+*.map
+*.obj
+*.tar.gz
+*.tar.xz
+*.7z
+**/__pycache__
