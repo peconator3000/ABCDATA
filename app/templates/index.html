@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <div class="album py-5 bg-light"> 
+    	<div class="container">
+    		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    			{% for obj in objs %}
+    				<div class="col">
+                        <a href="{{ url_for('second', current_object_name=obj.name) }}">
+        					<div class="card shadow-sm">
+    			    			<img src="{{ obj.path }}.png">
+    			    		</div>
+                        </a>
+                        <p>{{ obj.name }}</p>
+    				</div>
+    			{% endfor %}    		
+    		</div>
+    		
+    	</div>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                {% if prev_url %}
+                <li class="page-item"><a class="page-link" href="{{ prev_url }}">Previous</a></li>
+                {% endif %}
+                {% if next_url %}
+                <li class="page-item"><a class="page-link" href="{{ next_url }}">Next</a></li>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+</main>
+{% endblock %}

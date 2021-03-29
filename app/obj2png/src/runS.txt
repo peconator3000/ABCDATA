@@ -1,0 +1,5 @@
+#!/bin/bash
+for folder in retrieve
+for file in folder
+do
+python obj2png.py -i file -a -95 -e 100
